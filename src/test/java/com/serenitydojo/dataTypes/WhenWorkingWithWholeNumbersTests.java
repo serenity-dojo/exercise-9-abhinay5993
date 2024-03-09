@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 
 public class WhenWorkingWithWholeNumbersTests {
 
-	/*
+	/**
+	 * 
 	 * TODO: create a new int variable called timeJump and assign it a value Next,
 	 * add this variable to initialYear and assign the result to targetYear, so that
 	 * targetYear is equal to 2015

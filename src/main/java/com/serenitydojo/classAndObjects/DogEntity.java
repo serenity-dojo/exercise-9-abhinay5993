@@ -5,7 +5,9 @@ public class DogEntity {
 	private String name;
 	private String favoriteToy;
 	private int age;
-	
+	private static final String DOG_NOISE = "Woof";
+    private boolean isFed; 
+
 	public DogEntity(String name, String favoriteToy, int age) {
 		this.name = name;
 		this.favoriteToy = favoriteToy;
@@ -52,6 +54,28 @@ public class DogEntity {
 	 */
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	
+	/**
+	 * implementation of Exercise 4
+	 * 
+	 */
+	public String makeNoise() {
+		return DOG_NOISE;
+	}
+	
+	public boolean isFed() {
+		return isFed;
+	}
+
+	
+	/**
+	 * 
+	 * @param isFed the isFed to set
+	 */
+	public void feed() {
+		this.isFed = true;
 	}
 
 }

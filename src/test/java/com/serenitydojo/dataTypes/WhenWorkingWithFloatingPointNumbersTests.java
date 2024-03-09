@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 
 public class WhenWorkingWithFloatingPointNumbersTests {
 	
-	/*
+	/**
+	 * 
 	 * Exercise 1: Convert 27 degrees Celcius to Farenheit The equation is:
 	 * farenheit = (9 / 5) * celcius + 32 
 	 * TODO: Use a floating point calculation to
@@ -23,7 +24,7 @@ public class WhenWorkingWithFloatingPointNumbersTests {
 	}
 
     
-	/*
+	/**
 	 * 
 	 * Exercise 2: Convert kilograms to pounds There are 2.20462 pounds in a
 	 * kilogram. 

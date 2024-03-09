@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 
 public class WhenWorkingWithStringsTests {
 
-	/*
+	/**
+	 * 
 	 * TODO: Convert the book title to lower case and assign it to the
 	 * lowerCaseTitle variable
 	 * 
@@ -21,7 +22,8 @@ public class WhenWorkingWithStringsTests {
 	}
 
 	
-	/*
+	/**
+	 * 
 	 * TODO: Convert the book title to upper case and assign it to the
 	 * upperCaseTitle variable
 	 *
@@ -37,7 +39,8 @@ public class WhenWorkingWithStringsTests {
 	}
 
 	
-	/*
+	/**
+	 * 
 	 * TODO: Trim the spaces before and after the title text
 	 * 
 	 */
@@ -52,7 +55,8 @@ public class WhenWorkingWithStringsTests {
 	}
 
 	
-	/*
+	/**
+	 * 
 	 * TODO: Find the number of characters in the string
 	 * 
 	 */
@@ -67,7 +71,8 @@ public class WhenWorkingWithStringsTests {
 	}
 
 
-	/*
+	/**
+	 * 
 	 * TODO: Replace the word "Cat" with "Dog
 	 * 
 	 */
