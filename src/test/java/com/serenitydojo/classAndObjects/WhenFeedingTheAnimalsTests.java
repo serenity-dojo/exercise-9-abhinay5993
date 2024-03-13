@@ -1,4 +1,13 @@
 package com.serenitydojo.classAndObjects;
+import static com.serenitydojo.model.AnimalTypeEnum.CAT;
+import static com.serenitydojo.model.AnimalTypeEnum.DOG;
+import static com.serenitydojo.model.AnimalTypeEnum.HAMSTER;
+import static com.serenitydojo.model.FoodTypeEnum.CABBAGE;
+import static com.serenitydojo.model.FoodTypeEnum.DELUXE_DOG_FOOD;
+import static com.serenitydojo.model.FoodTypeEnum.DOG_FOOD;
+import static com.serenitydojo.model.FoodTypeEnum.LETTUCE;
+import static com.serenitydojo.model.FoodTypeEnum.SALMON;
+import static com.serenitydojo.model.FoodTypeEnum.TUNA;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.serenitydojo.model.FeederEntity;
@@ -8,9 +17,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedCatsTuna() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Cat", false);
 	
-	Assert.assertEquals("Tuna", food);
+	Assert.assertEquals(TUNA,feeder.feeds(CAT, false));
 	System.out.println("TC-01 - shouldFeedCatsTuna() - Executed successfully.");
 	}
 
@@ -18,9 +26,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedHamstersCabbage() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Hamster", false);
-
-	Assert.assertEquals("Cabbage", food);
+	
+	Assert.assertEquals(CABBAGE, feeder.feeds(HAMSTER, false));
 	System.out.println("TC-02 - shouldFeedHamstersCabbage() - Executed successfully.");
 	}
 
@@ -28,9 +35,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedDogsDogFood() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Dog", false);
-
-	Assert.assertEquals("Dog Food", food);
+	
+	Assert.assertEquals(DOG_FOOD, feeder.feeds(DOG, false));
 	System.out.println("TC-03 - shouldFeedDogsDogFood() - Executed successfully.");
 	}
 
@@ -38,9 +44,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedPremiumCatsPremiumFood() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Cat", true);
-
-	Assert.assertEquals("Salmon", food);
+	
+	Assert.assertEquals(SALMON,feeder.feeds(CAT, true));
 	System.out.println("TC-04 - shouldFeedPremiumCatsPremiumFood() - Executed successfully.");
 	}
 	
@@ -48,9 +53,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedPremiumDogsDeluxeDogFood() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Dog", true);
-
-	Assert.assertEquals("Deluxe Dog Food", food);
+	
+	Assert.assertEquals(DELUXE_DOG_FOOD,feeder.feeds(DOG, true));
 	System.out.println("TC-05 - shouldFeedPremiumDogsDeluxeDogFood() - Executed successfully.");
 	}
 	
@@ -58,9 +62,8 @@ public class WhenFeedingTheAnimalsTests {
 	@Test
 	public void shouldFeedPremiumHampstersLettuce() {
 	FeederEntity feeder = new FeederEntity();
-	String food = feeder.feeds("Hamster", true);
-
-    Assert.assertEquals("Lettuce", food);
+	
+    Assert.assertEquals(LETTUCE,feeder.feeds(HAMSTER, true));
 	System.out.println("TC-06 - shouldFeedPremiumHampstersLettuce() - Executed successfully.");
 	}
 
