@@ -1,24 +1,19 @@
 package com.serenitydojo.classAndObjects;
 
-public class DogEntity {
+/**
+ * 
+ * TODO: Inheritance and Polymorphism concepts implementation with - Exercise 1.
+ * 
+ */
+public class DogEntity extends AbstractPetEntity {
 	
-	private String name;
 	private String favoriteToy;
-	private int age;
 	private static final String DOG_NOISE = "Woof";
     private boolean isFed; 
 
 	public DogEntity(String name, String favoriteToy, int age) {
-		this.name = name;
+		super(name, age);
 		this.favoriteToy = favoriteToy;
-		this.age = age;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
 	}
 
 	/**
@@ -29,31 +24,10 @@ public class DogEntity {
 	}
 
 	/**
-	 * @return the age
-	 */
-	public int getAge() {
-		return age;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
 	 * @param favoriteToy the favoriteToy to set
 	 */
 	public void setFavoriteToy(String favoriteToy) {
 		this.favoriteToy = favoriteToy;
-	}
-
-	/**
-	 * @param age the age to set
-	 */
-	public void setAge(int age) {
-		this.age = age;
 	}
 	
 	
@@ -76,6 +50,11 @@ public class DogEntity {
 	 */
 	public void feed() {
 		this.isFed = true;
+	}
+
+	@Override
+	public String play() {
+		return "plays with bone";
 	}
 
 }

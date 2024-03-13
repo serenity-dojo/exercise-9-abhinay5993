@@ -1,10 +1,13 @@
 package com.serenitydojo.classAndObjects;
 
-public class CatEntity {
+/**
+ * 
+ * TODO: Inheritance and Polymorphism concepts implementation with - Exercise 1.
+ * 
+ */
+public class CatEntity extends AbstractPetEntity {
 
-	private String name;
 	private String favoriteFood;
-	private int age;
 	public static final String CAT_NOISE = "Meow";
 
 	public static String usualFood() {
@@ -12,22 +15,13 @@ public class CatEntity {
 	}
 
 	public CatEntity(String name, int age) {
-		this.name = name;
+		super(name, age);
 		this.favoriteFood = usualFood();
-		this.age = age;
 	}
 
 	public CatEntity(String name, String favoriteFood, int age) {
-		this.name = name;
+		super(name, age);
 		this.favoriteFood = favoriteFood;
-		this.age = age;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
 	}
 
 	/**
@@ -38,31 +32,10 @@ public class CatEntity {
 	}
 
 	/**
-	 * @return the age
-	 */
-	public int getAge() {
-		return age;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
 	 * @param favoriteFood the favoriteFood to set
 	 */
 	public void setFavoriteFood(String favoriteFood) {
 		this.favoriteFood = favoriteFood;
-	}
-
-	/**
-	 * @param age the age to set
-	 */
-	public void setAge(int age) {
-		this.age = age;
 	}
 
 	public void makeNoise() {
@@ -70,7 +43,7 @@ public class CatEntity {
 	}
 
 	public void feed(String food) {
-		System.out.println(name + " eats some " + food);
+		System.out.println(getName() + " eats some " + food);
 	}
 
 	public void groom() {
@@ -79,11 +52,16 @@ public class CatEntity {
 	}
 
 	private void cleanFur() {
-		System.out.println(name + " cleans his fur");
+		System.out.println(getName() + " cleans his fur");
 	}
 
 	private void lickPaws() {
-		System.out.println(name + " licks his paws");
+		System.out.println(getName() + " licks his paws");
+	}
+
+	@Override
+	public String play() {
+		return "plays with string";
 	}
 
 }

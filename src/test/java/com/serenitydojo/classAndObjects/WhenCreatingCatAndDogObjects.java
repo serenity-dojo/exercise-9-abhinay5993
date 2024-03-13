@@ -1,7 +1,9 @@
 package com.serenitydojo.classAndObjects;
+import static com.serenitydojo.classAndObjects.CatEntity.usualFood;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import static com.serenitydojo.classAndObjects.CatEntity.usualFood;
 
 public class WhenCreatingCatAndDogObjects {
 	
@@ -67,6 +69,24 @@ public class WhenCreatingCatAndDogObjects {
 
 	Assert.assertTrue(fido.isFed());
 	System.out.println("TC-05 - whenADogGetsFed() - Executed successfully.");
+	}
+	
+	
+	/**
+	 * 
+	 * TODO: Inheritance and Polymorphism concepts implementation with - Exercise 3.
+	 * 
+	 */
+	@Test
+	public void whenAnimalsPlay() {
+    AbstractPetEntity fido = new DogEntity("Fido", "Bone", 5);
+	AbstractPetEntity spot = new CatEntity("Spot", "String", 5);
+	AbstractPetEntity hazel = new HampsterEntity("Hazel", 1, "Wheel");
+
+    assertThat(fido.play(), equalTo("plays with bone"));
+    assertThat(spot.play(), equalTo("plays with string"));
+    assertThat(hazel.play(), equalTo("runs in wheel"));
+	System.out.println("TC-06 - whenAnimalsPlay() - Executed successfully.");
 	}
     
     
