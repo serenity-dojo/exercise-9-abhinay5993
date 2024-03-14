@@ -1,4 +1,4 @@
-package com.serenitydojo.classAndObjects;
+package com.serenitydojo.checks;
 import static org.assertj.core.api.StrictAssertions.assertThat;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
